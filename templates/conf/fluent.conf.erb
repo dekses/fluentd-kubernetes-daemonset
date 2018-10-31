@@ -147,6 +147,10 @@
   num_threads 2
 </match>
 <% when "graylog"%>
+<filter **>
+      @type record_modifier
+      char_encoding utf-8
+</filter>
 <match **>
    @type gelf
    @id out_graylog
@@ -154,6 +158,7 @@
    include_tag_key true
    host "#{ENV['FLUENT_GRAYLOG_HOST']}"
    port "#{ENV['FLUENT_GRAYLOG_PORT']}"
+   protocol "#{ENV['FLUENT_GRAYLOG_PROTOCOL']}"
    buffer_chunk_limit 4096K
    buffer_queue_limit 512
    flush_interval 5s
