@@ -23,6 +23,8 @@ GEM
       fluentd (>= 0.14.0, < 2)
       kubeclient (~> 1.1.4)
       lru_redux
+    fluent-plugin-record-modifier (1.1.0)
+      fluentd (>= 0.14.0, < 2)
     fluent-plugin-rewrite-tag-filter (2.1.0)
       fluent-config-regexp-type
       fluentd (>= 0.14.2, < 2)
@@ -96,6 +98,7 @@ DEPENDENCIES
   ffi
   fluent-plugin-gelf-hs (~> 1.0.7)
   fluent-plugin-kubernetes_metadata_filter (~> 2.1.4)
+  fluent-plugin-record-modifier (= 1.1.0)
   fluent-plugin-rewrite-tag-filter (~> 2.1.0)
   fluent-plugin-systemd (~> 1.0.1)
   fluentd (= 1.2.6)
@@ -103,4 +106,4 @@ DEPENDENCIES
   oj (= 3.5.1)
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
